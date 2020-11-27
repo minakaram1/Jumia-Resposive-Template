@@ -1,0 +1,1796 @@
+// Start Style The Banner Section
+.banner {
+    &.fixed {
+        @media (min-width: 768px) {
+            margin-top: 94px;
+        }
+    }
+
+    .banner-boxs {
+        position: relative;
+
+        .banner-list {
+            flex-basis: 18%;
+            background-color: $white;
+            position: absolute;
+            top: -72px;
+            left: -16px;
+            z-index: 9999;
+            width: 95%;
+            height: 100vh;
+            display: none;
+
+            ul {
+                margin: 20px;
+
+                li {
+                    margin-bottom: 20px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $black;
+
+                        svg {
+                            flex-basis: 17%;
+                        }
+
+                        span {
+                            flex-basis: 80%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .categories {
+                        display: flex;
+                        position: absolute;
+                        top: 0;
+                        left: 15.5%;
+                        height: 387px;
+                        width: 730px;
+                        background-color: $white;
+                        z-index: 999;
+                        font-size: 12px;
+                        padding: 0 20px;
+                        @include prefixer(border-radius, 4px);
+                        display: none;
+
+                        .category {
+                            min-width: 210px;
+
+                            &:nth-of-type(2) {
+                                padding: 0 20px;
+                            }
+
+                            li {
+                                margin-bottom: 2px;
+
+                                a {
+                                    color: $black;
+
+                                    &:hover {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                &.first {
+                                    font-weight: 700;
+                                    border-bottom: 1px solid $light-gray;
+                                    padding-bottom: 5px;
+                                    margin-bottom: 5px;
+
+                                    &:not(:first-of-type) {
+                                        margin-top: 20px;
+                                    }
+
+                                    &:hover {
+                                        a {
+                                            color: $orange;
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    &:first-of-type {
+                        .categories {
+                            .category {
+                                &:not(:first-of-type) {
+                                    min-width: fit-content;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        .categories {
+                            .category {
+                                li {
+                                    margin-bottom: 0.2px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        .categories {
+                            .category {
+                                min-width: 215px;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(4) {
+                        .categories {
+                            .category {
+                                min-width: 220px;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(8) {
+                        .categories {
+                            .category {
+                                min-width: 215px;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(12) {
+                        .categories {
+                            .category {
+                                &:nth-of-type(2) {
+                                    min-width: 240px;
+                                }
+
+                                &:nth-child(3) {
+                                    li {
+                                        &:nth-child(8) {
+                                            border: none;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        a {
+                            color: $orange;
+                        }
+                    }
+
+                    @media (min-width: 1200px) {
+                        margin-bottom: 10.5px;
+
+                        &:hover {
+                            .categories {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 10px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                @include prefixer(border-radius, 4px);
+                height: fit-content;
+                display: block;
+                position: static;
+            }
+        }
+
+        .banner-slider {
+            flex-basis: 100%;
+            @include prefixer(border-radius, 4px);
+            cursor: pointer;
+
+            .swiper-container {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        img {
+                            @include prefixer(border-radius, 4px);
+                        }
+                    }
+                }
+
+                .swiper-button-prev {
+                    display: none;
+
+                    @media (min-width: 992px) {
+                        display: block;
+                    }
+                }
+
+                .swiper-button-next {
+                    display: none;
+
+                    @media (min-width: 992px) {
+                        display: block;
+                    }
+                }
+
+            }
+
+            @media (min-width: 992px) {
+                flex-basis: 75%;
+            }
+
+            @media (min-width: 1200px) {
+                margin: 0 15px;
+            }
+        }
+
+        .banner-images {
+            flex-basis: 18.5%;
+            display: none;
+
+            .banner-image {
+                @include prefixer(border-radius, 4px);
+                cursor: pointer;
+
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+
+                img {
+                    @include prefixer(border-radius, 4px);
+                }
+
+            }
+
+            @media (min-width: 992px) {
+                flex-basis: 23%;
+                display: block;
+            }
+        }
+    }
+}
+
+// Finish Style The Banner Section
+// Start Style The Jumia Section
+.jumia {
+    margin: 20px 0;
+
+    .jumia-boxs {
+        .jumia-box {
+            background-color: $white;
+            flex-shrink: 1;
+            margin: 0;
+            padding: 10px;
+            cursor: pointer;
+
+            &:not(:last-of-type) {
+                .jumia-box-icon {
+                    @include prefixer(border-radius, 50%);
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+
+                    svg {
+                        font-size: 20px;
+                        margin-top: 9px;
+                    }
+
+                    @media (min-width:1200px) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            &:first-of-type {
+                .jumia-box-icon {
+                    background-color: $red;
+                }
+            }
+
+            &:nth-of-type(2) {
+                .jumia-box-icon {
+                    background-color: $blue;
+                    @include prefixer(transform, rotate(-45deg));
+                }
+            }
+
+            &:nth-of-type(3) {
+                .jumia-box-icon {
+                    background-color: $green;
+                }
+            }
+
+            .jumia-box-icon {
+                @include prefixer(border-radius, 50%);
+                margin-right: 10px;
+
+                svg {
+                    width: 40px;
+                    color: $white;
+                }
+            }
+
+            .jumia-box-text {
+                span {
+                    font-size: 14px;
+
+                    @media (min-width:1200px) {
+                        font: {
+                            size: 16px;
+                            weight: 600;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width:1200px) {
+                @include prefixer(border-radius, 4px);
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+// Finish Style The Jumia Section
+// Start Style The Top Sell Section
+.top-sell {
+    margin-bottom: 20px;
+
+    .top-sell-items {
+        background-color: $white;
+        padding: 15px;
+        padding-right: 25px;
+        @include prefixer(border-radius, 4px);
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .top-sell-boxs {
+
+            .top-sell-box {
+                margin: 0 1px;
+                flex-shrink: 1;
+                padding: 10px;
+                cursor: pointer;
+
+                .top-sell-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .top-sell-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Top Sell Section
+// Start Style The Trending Section
+.trending {
+    margin-bottom: 20px;
+
+    .trending-collection {
+        background-color: $white;
+        padding: 15px;
+        @include prefixer(border-radius, 4px);
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .trending-boxs {
+
+            .trending-box {
+                margin-bottom: 20px;
+                padding: 10px;
+                cursor: pointer;
+
+                .trending-box-text {
+                    margin: 10px auto 0;
+                    width: fit-content;
+
+                    .name {
+                        font-size: 14px;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Trending Section
+// Start Style The Deals Section
+.deals {
+    margin-bottom: 20px;
+
+    .deals-of-day {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .deals-texts {
+            background-color: red;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $white;
+            margin-bottom: 10px;
+
+            .deals-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .deals-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .deals-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .deals-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .deals-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Deals Section
+// Start Style The Help Section
+.help {
+    margin-bottom: 20px;
+
+    .help-boxs {
+        background-color: $white;
+        padding: 10px;
+        @include prefixer(border-radius, 4px);
+
+        .help-box {
+            padding: 0;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            img {
+                @include prefixer(border-radius, 4px);
+            }
+
+            @media (min-width: 992px) {
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+
+                &:last-of-type {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Help Section
+
+// Start Style The Fashion Section
+.fashion {
+    margin-bottom: 20px;
+
+    .fashion-accessories {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .fashion-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .fashion-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .fashion-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .fashion-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .fashion-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .fashion-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Fashion Section
+// Start Style The Fashion Section
+.slippers {
+    margin-bottom: 20px;
+
+    .slippers-flip {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .slippers-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .slippers-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .slippers-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .slippers-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .slippers-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .slippers-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Fashion Section
+// Start Style The Summer Section
+.summer {
+    margin-bottom: 20px;
+
+    .summer-boxs {
+        background-color: $white;
+        padding: 10px;
+        @include prefixer(border-radius, 4px);
+
+        .summer-box {
+            padding: 0;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            img {
+                @include prefixer(border-radius, 4px);
+            }
+
+            @media (min-width: 992px) {
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+
+                &:last-of-type {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Summer Section
+// Start Style The Shirts Section
+.shirts {
+    margin-bottom: 20px;
+
+    .mans-shirts {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .shirts-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .shirts-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .shirts-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .shirts-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .shirts-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .shirts-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Shirts Section
+// Start Style The Gaming Section
+.gaming {
+    margin-bottom: 20px;
+
+    .gaming-playstation {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .gaming-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .gaming-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .gaming-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .gaming-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .gaming-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .gaming-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Gaming Section
+// Start Style The Dresses Section
+.dresses {
+    margin-bottom: 20px;
+
+    .dresses-boxs {
+        background-color: $white;
+        padding: 10px;
+        @include prefixer(border-radius, 4px);
+
+        .dresses-box {
+            padding: 0;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            img {
+                @include prefixer(border-radius, 4px);
+            }
+
+            @media (min-width: 992px) {
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+
+                &:last-of-type {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Dresses Section
+// Start Style The Smartphones Section
+.smartphones {
+    margin-bottom: 20px;
+
+    .smartphones-best-sells {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .smartphones-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .smartphones-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .smartphones-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .smartphones-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .smartphones-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .smartphones-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Smartphones Section
+// Start Style The Beauty Section
+.beauty {
+    margin-bottom: 20px;
+
+    .beauty-boxs {
+        background-color: $white;
+        padding: 10px;
+        @include prefixer(border-radius, 4px);
+
+        .beauty-box {
+            padding: 0;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            img {
+                @include prefixer(border-radius, 4px);
+            }
+
+            @media (min-width: 992px) {
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+
+                &:last-of-type {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Beauty Section
+// Start Style The Cooling Section
+.cooling {
+    margin-bottom: 20px;
+
+    .cooling-acs {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .cooling-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .cooling-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .cooling-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .cooling-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .cooling-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .cooling-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Cooling Section
+// Start Style The Food Section
+.food {
+    margin-bottom: 20px;
+
+    .food-boxs {
+        background-color: $white;
+        padding: 10px;
+        @include prefixer(border-radius, 4px);
+
+        .food-box {
+            padding: 0;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            img {
+                @include prefixer(border-radius, 4px);
+            }
+
+            @media (min-width: 992px) {
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+
+                &:last-of-type {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Food Section
+// Start Style The Furniture Section
+.furniture {
+    margin-bottom: 20px;
+
+    .outdoor-furniture {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .furniture-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .furniture-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        display: block;
+
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+
+                        @media (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .furniture-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .furniture-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .furniture-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .furniture-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Furniture Section
+// Start Style The New Section
+.new {
+    margin-bottom: 20px;
+
+    .new-on-jumia {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+
+        .new-texts {
+            background-color: $gray;
+            padding: 10px 10px 3px;
+            @include prefixer(border-top-left-radius, 4px);
+            @include prefixer(border-top-right-radius, 4px);
+            color: $black;
+            margin-bottom: 10px;
+
+            .new-text {
+                h5 {
+                    cursor: text;
+
+                    span {
+                        font: {
+                            size: 20px;
+                            weight: 400;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    cursor: pointer;
+                }
+
+                span {
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                }
+
+                svg {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .new-boxs {
+            padding: 15px;
+            padding-right: 25px;
+
+            .new-box {
+                margin: 0 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                .new-box-image {
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        background-color: $light-orange;
+                        color: $orange;
+                        font-weight: 500;
+                        @include prefixer(border-radius, 4px);
+                        padding: 2px;
+                    }
+
+                    img {
+                        @include prefixer(border-radius, 4px);
+                    }
+                }
+
+                .new-box-text {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .name {
+                        white-space: nowrap;
+                        font-size: 14px;
+                    }
+
+                    .price {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .old-price {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                        opacity: 0.9;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+
+                @media (min-width: 576px) {
+                    margin: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The New Section
+// Start Style The Featured Section
+.featured {
+    margin-bottom: 20px;
+
+    .featured-categories {
+        background-color: $white;
+        padding: 15px;
+        @include prefixer(border-radius, 4px);
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .featured-boxs {
+
+            .featured-box {
+                margin-bottom: 20px;
+                padding: 10px;
+                cursor: pointer;
+
+                .featured-box-text {
+                    margin: 10px auto 0;
+                    width: fit-content;
+
+                    .name {
+                        font-size: 14px;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    @include prefixer(border-radius, 4px);
+                }
+            }
+        }
+    }
+}
+
+// Finish Style The Featured Section
+// Start Style The Jumia Text Section
+.jumia-text {
+    position: relative;
+
+    .jumia-text-box {
+        background-color: $white;
+        @include prefixer(border-radius, 4px);
+        padding: 20px 20px 15px;
+        color: $black;
+
+        h5 {
+            margin-bottom: 20px;
+
+            font: {
+                size: 18px;
+                weight: 400;
+            }
+        }
+
+        p {
+            font-size: 13px;
+
+            span {
+                font-weight: 700;
+            }
+
+            a {
+                color: $black;
+                text-decoration: underline;
+                font-weight: 700;
+            }
+
+            &.p-title {
+                font-size: 15px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        margin-bottom: 80px;
+    }
+}
+
+// Finish Style The Jumia Text Section

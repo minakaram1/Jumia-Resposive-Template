@@ -1,0 +1,333 @@
+// Start Style The Website Footer
+footer {
+    .footer-forms {
+        display: none;
+        background-color: $black;
+
+        .footer-forms-container {
+            padding: 20px 0;
+
+            .footer-logo {
+                padding: 0;
+
+                svg {
+                    width: 56%;
+                }
+            }
+
+            .footer-form {
+                padding: 0;
+
+                .footer-form-text {
+                    h6 {
+                        color: $white;
+                        font-size: 14px;
+                    }
+
+                    p {
+                        color: $gray2;
+                        font-size: 12px;
+                    }
+                }
+
+                .footer-form-form {
+                    svg {
+                        color: $gray2;
+                        color: #c7c7cd;
+                        margin-right: -30px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    input {
+                        padding: 5px 40px;
+                        @include prefixer(border-radius, 4px);
+                        border: 1px solid $white;
+                        border: none;
+                        font-size: 13px;
+                        width: 62%;
+
+                        &:hover {
+                            border: 1px solid $orange;
+                        }
+                    }
+
+                    button {
+                        @include prefixer(border-radius, 4px);
+                        background: none;
+                        border: 1px solid $white;
+                        color: $white;
+                        text-transform: uppercase;
+                        padding: 5px 10px;
+                        outline: none;
+                        font-size: 13px;
+
+                        &:hover {
+                            border: 1px solid $orange;
+                            color: $orange
+                        }
+
+                        &:first-of-type {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+
+            .footer-apps {
+                padding: 0;
+
+                .footer-apps-icons {
+                    .footer-apps-icon {
+                        padding: 0;
+
+                        &:last-of-type {
+                            margin-left: 23px;
+                        }
+
+                        svg {
+                            width: 40px;
+                        }
+
+                        h6 {
+                            color: $white;
+                            font-size: 14px;
+                        }
+
+                        p {
+                            color: $gray2;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                svg {
+                    width: 100px;
+
+                    &.google-play {
+                        cursor: pointer;
+
+                        &:hover {
+                            path {
+                                fill: $orange;
+                            }
+
+                            rect {
+                                fill: $orange;
+                            }
+
+                            polygon {
+                                fill: $orange;
+                            }
+                        }
+                    }
+
+                    &.app-store {
+                        cursor: pointer;
+                        margin-left: 5px;
+
+                        &:hover {
+                            path {
+                                fill: $orange;
+
+                                &.black {
+                                    fill: $light-black;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    margin-top: 50px;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    .footer-boxs {
+        display: none;
+        background-color: $light-black;
+
+        .footer-box-container {
+            padding: 50px 0;
+
+            .footer-box {
+                margin-bottom: 30px;
+
+                .footer-box-title {
+                    margin-bottom: 25px;
+
+                    h6 {
+                        color: $white;
+                        font-size: 14px;
+                    }
+                }
+
+                .footer-box-links {
+
+                    a {
+                        display: block;
+                        color: $gray2;
+                        font-size: 13px;
+                    }
+
+                    .footer-box-link {
+                        flex-basis: 40%;
+
+                        a {}
+                    }
+                }
+
+                .footer-box-icons {
+                    a {
+                        &:not(:last-of-type) {
+                            margin-right: 20px;
+                        }
+
+                        svg {
+                            color: $white;
+                            font-size: 20px;
+
+                            &.jumia-icons {
+                                width: 35px;
+                                fill: $white;
+
+                                &:hover {
+                                    fill: $orange;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            svg {
+                                color: $orange;
+                            }
+                        }
+
+                        &:first-of-type {
+                            .jumia-icons {
+                                width: 25px;
+                            }
+                        }
+
+                        &:last-of-type {
+                            .jumia-icons {
+                                width: 45px;
+                            }
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    .footer-box-icons {
+                        a {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    .footer-language {
+        background-color: $black;
+        padding-bottom: 20px;
+
+        .language {
+            padding-top: 10px;
+            border-top: 1px solid $light-gray2;
+            font-size: 14px;
+
+            .english {
+                padding-right: 10px;
+                opacity: 0.5;
+                cursor: default;
+                color: $gray2;
+
+                svg {
+                    margin-right: 5px;
+                }
+
+                span {
+                    &:last-of-type {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .arabic {
+                padding-left: 5px;
+
+                a {
+                    color: $white;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            @media (min-width: 768px) {
+                border-top: 1px solid $dark-gray;
+            }
+        }
+
+        @media (min-width: 768px) {
+            background-color: $light-black;
+        }
+    }
+
+    .footer-links {
+        background-color: $black;
+
+        .footer-links-container {
+            padding: 10px 0;
+            border-top: 1px solid $gray2;
+            border-bottom: 1px solid $gray2;
+
+            .footer-link {
+                a {
+                    color: $white;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .copyrights {
+        background-color: $black;
+        padding: 20px 0 10px;
+
+        .copyright {
+            p {
+                color: $white;
+                font-size: 14px;
+                text-align: center;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+// Finish Style The Website Footer
